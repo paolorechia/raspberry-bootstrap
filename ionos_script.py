@@ -14,6 +14,7 @@ headers = {
 
 zone_id = "e8007bf2-3483-11ee-920c-0a5864441240"
 record_id = "d863508c-10d9-9c84-a1a9-f43a2439a2a3"
+registry_record_id = "8faccae7-fd94-9c9a-d80f-59f13a101d8b"
 
 
 def get_zones():
@@ -51,4 +52,6 @@ def create_cloud_record():
 if __name__ == "__main__":
     public_ip_address = requests.get("https://ifconfig.me").text
     response = update_record(zone_id, record_id, public_ip_address)
+    print(response)
+    response = update_record(zone_id, registry_record_id, public_ip_address)
     print(response)
