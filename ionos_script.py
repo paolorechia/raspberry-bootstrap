@@ -41,7 +41,7 @@ def create_cloud_record():
         "name": "cloud.mygpu.de",
         "type": "A",
         "content": "1.2.3.4",
-        "ttl": 3600,
+        "ttl": 60,
         "prio": 0,
         "disabled": False
     }])
